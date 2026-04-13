@@ -1,1 +1,201 @@
 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Your Name | Personal Website</title>
+  <meta name="description" content="Personal website of Your Name" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- Fixed Navigation -->
+  <header class="site-header">
+    <nav class="navbar">
+      <a href="#home" class="logo">Your Name</a>
+      <ul class="nav-links">
+        <li><a href="#about">About</a></li>
+        <li><a href="#news">News</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#cv">CV</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Hero Section -->
+  <section id="home" class="hero section">
+    <div class="container hero-content">
+      <div class="hero-text">
+        <h1>Your Name</h1>
+        <p class="subtitle">
+          Ph.D. Student in Bioengineering at University of Washington
+        </p>
+        <p class="hero-description">
+          I work at the intersection of neurotechnology, neural signal analysis,
+          and brain stimulation. My research focuses on understanding and shaping
+          brain plasticity through computational and experimental methods.
+        </p>
+
+        <div class="hero-buttons">
+          <a href="#projects" class="btn">View Projects</a>
+          <a href="assets/cv.pdf" class="btn btn-outline" target="_blank">Download CV</a>
+        </div>
+      </div>
+
+      <div class="hero-image">
+        <img src="assets/profile.jpg" alt="Profile photo of Your Name" />
+      </div>
+    </div>
+  </section>
+
+  <!-- About Section -->
+  <section id="about" class="section">
+    <div class="container">
+      <h2>About</h2>
+      <p>
+        I am a Ph.D. student in Bioengineering at the University of Washington.
+        My research combines electrophysiology, neural data analysis, and
+        computational modeling to study cortical plasticity, neuromodulation,
+        and brain-computer interfaces.
+      </p>
+      <p>
+        I am especially interested in translational neurotechnology: building
+        tools and models that can help make stimulation and neural interface
+        systems more adaptive, targeted, and effective.
+      </p>
+
+      <div class="about-highlights">
+        <div class="card">
+          <h3>Research Interests</h3>
+          <p>Neurotechnology, brain stimulation, neural plasticity, BCI, signal processing</p>
+        </div>
+        <div class="card">
+          <h3>Methods</h3>
+          <p>EEG, ECoG, electrophysiology, MATLAB, Python, modeling, statistics</p>
+        </div>
+        <div class="card">
+          <h3>Current Focus</h3>
+          <p>Inferring cortical plasticity rules and improving stimulation design</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- News Section -->
+  <section id="news" class="section alt-bg">
+    <div class="container">
+      <h2>News</h2>
+      <div class="news-list">
+
+        <article class="news-item">
+          <span class="news-date">Apr 2026</span>
+          <p>Presented recent work on cortical plasticity inference and stimulation timing.</p>
+        </article>
+
+        <article class="news-item">
+          <span class="news-date">Mar 2026</span>
+          <p>Continued developing correlation-based models for predicting connectivity change.</p>
+        </article>
+
+        <article class="news-item">
+          <span class="news-date">Jan 2026</span>
+          <p>Expanded ongoing neurotechnology projects involving BCI and neural signal analysis.</p>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Projects Section -->
+  <section id="projects" class="section">
+    <div class="container">
+      <h2>Projects</h2>
+
+      <div class="project-grid">
+
+        <article class="project-card">
+          <img src="assets/project1.jpg" alt="Project 1 image" class="project-image" />
+          <div class="project-content">
+            <h3>Cortical Plasticity Inference</h3>
+            <p>
+              Developed a correlation-based framework inspired by STDP theory
+              to predict functional connectivity changes from neural activity.
+            </p>
+            <p><strong>Tools:</strong> Python, MATLAB, electrophysiology, coherence analysis</p>
+          </div>
+        </article>
+
+        <article class="project-card">
+          <img src="assets/project2.jpg" alt="Project 2 image" class="project-image" />
+          <div class="project-content">
+            <h3>Encephalophone BCI</h3>
+            <p>
+              Built and refined a musical brain-computer interface that maps EEG
+              features to musical notes for real-time control and training.
+            </p>
+            <p><strong>Tools:</strong> EEG, C++, JUCE, signal processing, adaptive feedback</p>
+          </div>
+        </article>
+
+        <article class="project-card">
+          <img src="assets/project3.jpg" alt="Project 3 image" class="project-image" />
+          <div class="project-content">
+            <h3>Fatigue Monitoring Neurotechnology</h3>
+            <p>
+              Explored a wearable neurotechnology concept combining EEG and heart
+              rate sensing for early fatigue detection in real-world settings.
+            </p>
+            <p><strong>Tools:</strong> EEG, PPG, Python, feature extraction, real-time monitoring</p>
+          </div>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- CV Section -->
+  <section id="cv" class="section alt-bg">
+    <div class="container">
+      <h2>CV</h2>
+      <p>
+        You can view or download my current CV below.
+      </p>
+
+      <div class="cv-links">
+        <a href="assets/cv.pdf" class="btn" target="_blank">Open CV</a>
+        <a href="assets/cv.pdf" class="btn btn-outline" download>Download CV</a>
+      </div>
+
+      <div class="cv-preview">
+        <iframe
+          src="assets/cv.pdf"
+          width="100%"
+          height="600"
+          title="CV Preview">
+        </iframe>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section id="contact" class="section">
+    <div class="container">
+      <h2>Contact</h2>
+      <p>Email: <a href="mailto:yourname@email.com">yourname@email.com</a></p>
+      <p>GitHub: <a href="https://github.com/yourusername" target="_blank">github.com/yourusername</a></p>
+      <p>LinkedIn: <a href="https://www.linkedin.com/in/yourusername/" target="_blank">linkedin.com/in/yourusername</a></p>
+      <p>Google Scholar: <a href="#" target="_blank">Scholar Profile</a></p>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="container">
+      <p>&copy; 2026 Your Name. All rights reserved.</p>
+    </div>
+  </footer>
+
+</body>
+</html>
