@@ -1,6 +1,180 @@
 /* ==========================================
-   1. Specific Feature Typography Rules
+   Global Variables
    ========================================== */
+
+:root {
+  --bg-primary: #ffffff;
+  --bg-secondary: #f7f7f7;
+  --text-main: #2f2f2f;
+  --text-muted: #6f6f6f;
+  --text-link-blue: #1f6ecb;
+  --border-color: #dddddd;
+  --shadow-light: rgba(0, 0, 0, 0.08);
+  --shadow-medium: rgba(0, 0, 0, 0.12);
+}
+
+/* ==========================================
+   Base Styling
+   ========================================== */
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  background: var(--bg-primary);
+  color: var(--text-main);
+  line-height: 1.6;
+}
+
+a {
+  color: var(--text-link-blue);
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+/* ==========================================
+   Navigation
+   ========================================== */
+
+.navbar {
+  width: 100%;
+  background: #ffffff;
+  border-bottom: 1px solid var(--border-color);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.nav-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 1rem 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.nav-branding {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: var(--text-main);
+  text-decoration: none;
+}
+
+.nav-links {
+  display: flex;
+  gap: 1.5rem;
+}
+
+.nav-links a {
+  color: var(--text-main);
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.nav-links a:hover {
+  color: var(--text-link-blue);
+}
+
+/* ==========================================
+   General Section Layout
+   ========================================== */
+
+.section {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 5rem 2rem;
+}
+
+.section h2 {
+  font-size: 3rem;
+  font-weight: 400;
+  margin-bottom: 2rem;
+  color: var(--text-main);
+}
+
+/* ==========================================
+   Hero / Biography Section
+   ========================================== */
+
+.hero-split {
+  display: grid;
+  grid-template-columns: 360px 1fr;
+  gap: 4rem;
+  align-items: center;
+  min-height: 80vh;
+}
+
+.hero-left {
+  text-align: center;
+}
+
+.profile-photo-large {
+  width: 260px;
+  height: 260px;
+  object-fit: cover;
+  border-radius: 50%;
+  margin: 0 auto 1.5rem auto;
+}
+
+.profile-name {
+  font-size: 2rem;
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+}
+
+.hero-role {
+  font-size: 1.25rem;
+  color: var(--text-main);
+}
+
+.hero-affiliation {
+  font-size: 1.15rem;
+  color: var(--text-muted);
+  margin-bottom: 1.5rem;
+}
+
+.social-icons-row {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1.25rem;
+  margin-top: 1.5rem;
+}
+
+.social-icons-row a {
+  font-size: 1.5rem;
+  color: var(--text-main);
+  text-decoration: none;
+}
+
+.social-icons-row a:hover {
+  color: var(--text-link-blue);
+}
+
+.cv-text-icon {
+  font-size: 1.05rem !important;
+  font-weight: 700;
+  border: 1.5px solid var(--text-main);
+  border-radius: 4px;
+  padding: 0.15rem 0.35rem;
+}
+
+.cv-text-icon:hover {
+  border-color: var(--text-link-blue);
+}
+
 .bio-title {
   font-family: 'Montserrat', sans-serif;
   font-size: 3.4rem;
@@ -10,156 +184,35 @@
   color: var(--text-main);
 }
 
-/* ==========================================
-   2. News Highlight Box & Top Bold Rule
-   ========================================== */
-.news-highlight-box {
-  background: #f7f7f7;
-  border-radius: 12px;
-  box-shadow: 0 10px 28px rgba(0, 0, 0, 0.08);
-  padding: 4rem;
-}
-
-.latest-news-item {
-  font-weight: 800;
-  color: #000000;
-}
-
-
-/* ==========================================
-   3. Linked Project Box System
-   ========================================== */
-.project-title-link {
-  color: inherit;
-  text-decoration: none;
-}
-
-.project-title-link:hover {
-  color: var(--text-link-blue);
-  text-decoration: underline;
-}
-
-.card {
-  transition: transform 0.2s ease, box-shadow 0.2s ease;
-}
-
-.card:hover {
-  transform: translateY(-4px);
-  box-shadow: 0 8px 18px rgba(0, 0, 0, 0.08);
-}
-
-/* ==========================================
-   4. Dual-Line Gallery Titles
-   ========================================== */
-.gallery-sub-heading {
+.hero-right p {
   font-size: 1.25rem;
-  color: var(--text-link-blue);
-  margin-top: -1.2rem;
-  margin-bottom: 2rem;
-  font-weight: 500;
+  margin-bottom: 1.2rem;
 }
 
-/* ==========================================
-   5. Graphic Icon Contact Tiles
-   ========================================== */
-.contact-section {
-  padding-top: 5rem;
-}
-
-.contact-content {
-  display: grid;
-  grid-template-columns: 1fr 2fr;
-  gap: 3rem;
-}
-
-.contact-form-area {
-  grid-column: 2;
-}
-
-.contact-form-area h3 {
-  font-size: 1.5rem;
-  font-weight: 700;
-  margin-bottom: 1.5rem;
-}
-
-.contact-form {
-  display: flex;
-  flex-direction: column;
-  gap: 1.4rem;
-}
-
-.contact-form input,
-.contact-form textarea {
-  width: 100%;
-  padding: 1rem 1.2rem;
-  font-size: 1.2rem;
-  border: 1px solid #cfd8e3;
-  border-radius: 6px;
-  font-family: inherit;
-}
-
-.contact-form textarea {
-  min-height: 190px;
-  resize: vertical;
-}
-
-.contact-form button {
-  background: var(--text-link-blue);
-  color: #ffffff;
-  border: none;
-  border-radius: 6px;
-  padding: 0.9rem;
-  font-size: 1.1rem;
-  font-weight: 700;
-  cursor: pointer;
-}
-
-.contact-form button:hover {
-  opacity: 0.9;
-}
-
-.contact-info-list {
-  margin-top: 2.5rem;
-  display: flex;
-  flex-direction: column;
-  gap: 1.4rem;
-}
-
-.contact-info-row {
-  display: flex;
-  align-items: center;
-  gap: 1.5rem;
-  font-size: 1.35rem;
-}
-
-.contact-info-row i {
-  width: 42px;
-  font-size: 2rem;
-  color: #333333;
-  text-align: center;
-}
-
-.contact-info-row a {
+.text-link {
   color: var(--text-link-blue);
   text-decoration: none;
 }
 
-.contact-info-row a:hover {
+.text-link:hover {
   text-decoration: underline;
 }
 
-@media (max-width: 768px) {
-  .contact-content {
-    grid-template-columns: 1fr;
-  }
-
-  .contact-form-area {
-    grid-column: 1;
-  }
+.interests-title {
+  font-size: 1.7rem;
+  margin-top: 2rem;
+  margin-bottom: 0.8rem;
 }
+
+.interest-list {
+  padding-left: 1.5rem;
+  font-size: 1.2rem;
+}
+
 /* ==========================================
-   6. Academic Experience Timeline Style
+   Experience Section
    ========================================== */
+
 .experience-section {
   padding-top: 5rem;
 }
@@ -212,7 +265,7 @@
   border: 1px solid var(--border-color);
   border-radius: 8px;
   padding: 1.8rem 2rem;
-  box-shadow: 0 12px 28px rgba(0, 0, 0, 0.12);
+  box-shadow: 0 12px 28px var(--shadow-medium);
 }
 
 .experience-logo {
@@ -239,7 +292,297 @@
   color: var(--text-muted);
 }
 
+/* ==========================================
+   News Section
+   ========================================== */
+
+.news-highlight-box {
+  background: #f7f7f7;
+  border-radius: 12px;
+  box-shadow: 0 10px 28px var(--shadow-light);
+  padding: 4rem;
+}
+
+.news-list {
+  list-style-position: outside;
+  padding-left: 1.5rem;
+  font-size: 1.2rem;
+}
+
+.news-list li {
+  margin-bottom: 0.9rem;
+}
+
+.latest-news-item {
+  font-weight: 800;
+  color: #000000;
+}
+
+/* ==========================================
+   Projects Section
+   ========================================== */
+
+.card-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+}
+
+.card {
+  background: #ffffff;
+  border: 1px solid var(--border-color);
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.04);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 18px var(--shadow-light);
+}
+
+.card img {
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+}
+
+.card h3 {
+  font-size: 1.35rem;
+  padding: 1.3rem 1.3rem 0.5rem 1.3rem;
+  line-height: 1.3;
+}
+
+.card p {
+  font-size: 1.05rem;
+  color: var(--text-muted);
+  padding: 0 1.3rem 1.5rem 1.3rem;
+}
+
+.project-title-link {
+  color: inherit;
+  text-decoration: none;
+}
+
+.project-title-link:hover {
+  color: var(--text-link-blue);
+  text-decoration: underline;
+}
+
+/* ==========================================
+   CV Section
+   ========================================== */
+
+#cv p {
+  font-size: 1.2rem;
+}
+
+/* ==========================================
+   Gallery Section
+   ========================================== */
+
+.gallery-sub-heading {
+  font-size: 1.25rem;
+  color: var(--text-link-blue);
+  margin-top: -1.2rem;
+  margin-bottom: 2rem;
+  font-weight: 500;
+}
+
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
+}
+
+.gallery-item {
+  position: relative;
+  overflow: hidden;
+  border-radius: 10px;
+}
+
+.gallery-item img {
+  width: 100%;
+  height: 280px;
+  object-fit: cover;
+  transition: transform 0.25s ease;
+}
+
+.gallery-item:hover img {
+  transform: scale(1.04);
+}
+
+.gallery-overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.35);
+  color: #ffffff;
+  display: flex;
+  align-items: flex-end;
+  padding: 1.2rem;
+  opacity: 0;
+  transition: opacity 0.25s ease;
+}
+
+.gallery-item:hover .gallery-overlay {
+  opacity: 1;
+}
+
+.gallery-overlay span {
+  font-size: 1.2rem;
+  font-weight: 700;
+}
+
+/* ==========================================
+   Contact Section
+   ========================================== */
+
+.contact-section {
+  padding-top: 5rem;
+}
+
+.contact-content {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  gap: 3rem;
+}
+
+.contact-form-area {
+  grid-column: 2;
+}
+
+.contact-form-area h3 {
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin-bottom: 1.5rem;
+}
+
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.4rem;
+}
+
+.contact-form input,
+.contact-form textarea {
+  width: 100%;
+  padding: 1rem 1.2rem;
+  font-size: 1.2rem;
+  border: 1px solid #cfd8e3;
+  border-radius: 6px;
+  font-family: inherit;
+  color: var(--text-main);
+}
+
+.contact-form input::placeholder,
+.contact-form textarea::placeholder {
+  color: #6f7785;
+}
+
+.contact-form textarea {
+  min-height: 190px;
+  resize: vertical;
+}
+
+.contact-form button {
+  background: var(--text-link-blue);
+  color: #ffffff;
+  border: none;
+  border-radius: 6px;
+  padding: 0.9rem;
+  font-size: 1.1rem;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.contact-form button:hover {
+  opacity: 0.9;
+}
+
+.contact-info-list {
+  margin-top: 2.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.4rem;
+}
+
+.contact-info-row {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  font-size: 1.35rem;
+}
+
+.contact-info-row i {
+  width: 42px;
+  font-size: 2rem;
+  color: #333333;
+  text-align: center;
+}
+
+.contact-info-row a {
+  color: var(--text-link-blue);
+  text-decoration: none;
+}
+
+.contact-info-row a:hover {
+  text-decoration: underline;
+}
+
+/* ==========================================
+   Responsive Layout
+   ========================================== */
+
+@media (max-width: 900px) {
+  .hero-split {
+    grid-template-columns: 1fr;
+    gap: 2.5rem;
+    text-align: center;
+  }
+
+  .hero-right {
+    text-align: left;
+  }
+
+  .card-container,
+  .gallery-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .contact-content {
+    grid-template-columns: 1fr;
+  }
+
+  .contact-form-area {
+    grid-column: 1;
+  }
+}
+
 @media (max-width: 768px) {
+  .nav-container {
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  .nav-links {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1rem;
+  }
+
+  .section {
+    padding: 4rem 1.5rem;
+  }
+
+  .section h2 {
+    font-size: 2.5rem;
+  }
+
+  .bio-title {
+    font-size: 2.8rem;
+  }
+
   .experience-layout {
     grid-template-columns: 1fr;
   }
@@ -251,5 +594,61 @@
   .experience-card {
     grid-template-columns: 55px 1fr;
     padding: 1.4rem;
+  }
+
+  .experience-card h3 {
+    font-size: 1.25rem;
+  }
+
+  .experience-org {
+    font-size: 1.1rem;
+  }
+
+  .news-highlight-box {
+    padding: 3rem 1.5rem;
+  }
+
+  .card-container,
+  .gallery-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .contact-info-row {
+    font-size: 1.15rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .profile-photo-large {
+    width: 210px;
+    height: 210px;
+  }
+
+  .profile-name {
+    font-size: 1.7rem;
+  }
+
+  .hero-role,
+  .hero-affiliation {
+    font-size: 1.05rem;
+  }
+
+  .bio-title {
+    font-size: 2.4rem;
+  }
+
+  .hero-right p,
+  .interest-list,
+  .news-list {
+    font-size: 1.05rem;
+  }
+
+  .experience-card {
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+
+  .experience-logo {
+    margin: 0 auto;
   }
 }
