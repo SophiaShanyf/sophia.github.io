@@ -161,11 +161,14 @@ p {
 }
 
 .profile-photo-large {
-  width: 190px; /* Increased image footprint size */
+  width: 190px;
   height: 190px;
   border-radius: 50%;
   object-fit: cover;
-  margin-bottom: 1.75rem;
+  
+  /* Forces the flexbox layout to center the image horizontally */
+  margin: 0 auto 1.75rem auto; 
+  
   border: 4px solid #ffffff;
   box-shadow: 0 10px 20px -3px rgba(124, 58, 237, 0.2), 0 0 0 2px var(--primary);
 }
