@@ -16,14 +16,14 @@
     <div class="nav-container">
       <a href="#home" class="nav-branding">Sophia (Yufei) Shan</a>
       <div class="nav-links">
-        <a href="#home">Home</a>
-        <a href="#experience">Experience</a> <!-- Added to Top Tab navigation -->
-        <a href="#news">News</a>
-        <a href="#projects">Projects</a>
-        <a href="#cv">CV</a>
-        <a href="#gallery">Gallery</a>
-        <a href="#contact">Contact</a>
-      </div>
+      <a href="#home">Home</a>
+      <a href="#experience">Experience</a>
+      <a href="#news">News</a>
+      <a href="#projects">Projects</a>
+      <a href="#cv">CV</a>
+      <a href="#gallery">Gallery</a>
+      <a href="#contact">Contact</a>
+    </div>
     </div>
   </nav>
 
@@ -60,10 +60,11 @@
 
       <h3 class="interests-title">Interests</h3>
       <ul class="interest-list">
-        <li>Neurotechnology</li>
+        <li>Engineering Neuroplasticity</li>
+        <li>Stroke Rehabilitation</li>
         <li>Neuromodulation</li>
         <li>Brain-Computer Interfaces</li>
-        <li>Neural Plasticity</li>
+        
       </ul>
     </div>
   </section>
@@ -95,54 +96,107 @@
 
     </div>
   </section>
+ <section id="experience" class="section experience-section">
+  <h2>Experience</h2>
 
+  <div class="experience-layout">
+
+    <div class="experience-timeline">
+      <div class="timeline-dot filled"></div>
+      <div class="timeline-line"></div>
+      <div class="timeline-dot"></div>
+      <div class="timeline-line"></div>
+      <div class="timeline-dot"></div>
+    </div>
+
+    <div class="experience-cards">
+
+      <div class="experience-card">
+        <img src="assets/uw_logo.png" alt="University of Washington logo" class="experience-logo">
+        <div>
+          <h3>Graduate Research Assistant</h3>
+          <p class="experience-org">Yazdan Lab, University of Washington</p>
+          <p class="experience-meta">September 2022 – Present · Seattle</p>
+        </div>
+      </div>
+
+      <div class="experience-card">
+        <img src="assets/cmu_logo.png" alt="Carnegie Mellon University logo" class="experience-logo">
+        <div>
+          <h3>Undergraduate Research Assistant</h3>
+          <p class="experience-org">Neuroscience and Neuroengineering Research</p>
+          <p class="experience-meta">August 2019 – May 2023 · Pittsburgh</p>
+        </div>
+      </div>
+
+      <div class="experience-card">
+        <img src="assets/uw_logo.png" alt="University of Washington logo" class="experience-logo">
+        <div>
+          <h3>Brain-Computer Interface Developer</h3>
+          <p class="experience-org">Encephalophone Project</p>
+          <p class="experience-meta">2024 – Present · Seattle</p>
+        </div>
+      </div>
+
+    </div>
+
+  </div>
+</section>
+
+  
   <!-- 2. News Section (with gray highlight shadow and top line bolded) -->
   <section id="news" class="section news-highlight-box">
-    <h2>News</h2>
-    <ul class="news-list">
-      <!-- Top item bolded -->
-      <li class="latest-news-item"><strong>May 2026: I'm accepted to the Allen Institute's Modeling Software Workshop!</strong></li>
-      <li><strong>March 2026:</strong> I gave a talk at the CNC Forum at UW on regional-specific neural plasticity prediction.</li>
-      <li><strong>Jan 2026:</strong> I was awarded the CoNECT and Weill NeuroHUB Student Travel Grant.</li>
-      <li><strong>July 2025:</strong> I gave a talk on the Neural Vascular Dynamics after Ischemic Stroke at EMBC 2025 Annual International Conference.</li>
-      <li><strong>Sep 2024:</strong> I was awarded the UW Herbold Fellowship for the 2024-2025 academic year.</li>
-    </ul>
-  </section>
+  <h2>News</h2>
+
+  <ul class="news-list">
+    <li class="latest-news-item">
+      <strong>May 2026:</strong> I was accepted to the Allen Institute's Modeling Software Workshop.
+    </li>
+    <li><strong>March 2026:</strong> I gave a talk at the CNC Forum at UW on region-specific neural plasticity prediction.</li>
+    <li><strong>January 2026:</strong> I was awarded the CoNECT and Weill NeuroHUB Student Travel Grant.</li>
+    <li><strong>July 2025:</strong> I gave a talk on neural vascular dynamics after ischemic stroke at EMBC 2025.</li>
+    <li><strong>September 2024:</strong> I was awarded the UW Herbold Fellowship for the 2024–2025 academic year.</li>
+  </ul>
+</section>
 
   <!-- 3. Projects Section (Linked Card Blocks using blank anchors) -->
   <section id="projects" class="section">
-    <h2>Projects</h2>
-    <div class="card-container">
-      
-      <!-- Project 1 Link -->
-      <a href="#" class="card-link-wrapper">
-        <div class="card">
-          <img src="assets/proj1_fig.png" alt="Project 1 image">
-          <h3>Neurovascular Unit Instability during Ischemic Stroke</h3>
-          <p>Studying the neural and neurovascular unit response due to ischemic stroke induced using the photothrombotic lesion technique in NHP.</p>
-        </div>
-      </a>
+  <h2>Projects</h2>
 
-      <!-- Project 2 Link -->
-      <a href="#" class="card-link-wrapper">
-        <div class="card">
-          <img src="assets/proj2_fig.png" alt="Project 2 image">
-          <h3>Inferring Regional Cortical Plasticity using Prediction Model</h3>
-          <p>A correlation-based functional connectivity prediction model inspired by Kempter's theorem to infer regional-specific cortical plasticity.</p>
-        </div>
-      </a>
+  <div class="card-container">
 
-      <!-- Project 3 Link -->
-      <a href="#" class="card-link-wrapper">
-        <div class="card">
-          <img src="assets/proj3_fig.jpg" alt="Project 3 image">
-          <h3>Encephalophone: a music BCI</h3>
-          <p>A musical brain-computer interface using motor cortex EEG features to produce intentional and real-time music tone production.</p>
-        </div>
-      </a>
-
+    <div class="card">
+      <img src="assets/proj1_fig.png" alt="Project 1 image">
+      <h3>
+        <a href="projects/stroke.html" class="project-title-link">
+          Neurovascular Unit Instability during Ischemic Stroke
+        </a>
+      </h3>
+      <p>Studying neural and neurovascular responses to photothrombotic ischemic stroke in non-human primates.</p>
     </div>
-  </section>
+
+    <div class="card">
+      <img src="assets/proj2_fig.png" alt="Project 2 image">
+      <h3>
+        <a href="projects/plasticity.html" class="project-title-link">
+          Inferring Regional Cortical Plasticity using Prediction Models
+        </a>
+      </h3>
+      <p>A correlation-based functional connectivity prediction model inspired by Kempter's theorem to infer region-specific cortical plasticity.</p>
+    </div>
+
+    <div class="card">
+      <img src="assets/proj3_fig.jpg" alt="Project 3 image">
+      <h3>
+        <a href="projects/encephalophone.html" class="project-title-link">
+          Encephalophone: A Music BCI
+        </a>
+      </h3>
+      <p>A musical brain-computer interface using motor cortex EEG features for intentional real-time tone production.</p>
+    </div>
+
+  </div>
+</section>
 
   <!-- CV Section -->
   <section id="cv" class="section">
@@ -152,50 +206,58 @@
 
   <!-- 4. Restructured Gallery Heading Elements -->
   <section id="gallery" class="section">
-    <h2>Gallery</h2>
-    <span class="gallery-sub-heading">Sophia when not in lab</span>
-    
-    <div class="gallery-grid">
-      <div class="gallery-item">
-        <img src="assets/gallery1.jpg" alt="Nature exploration">
-        <div class="gallery-overlay"><span>Nature Exploration</span></div>
-      </div>
-      <div class="gallery-item">
-        <img src="assets/gallery2.jpg" alt="Game design illustration">
-        <div class="gallery-overlay"><span>Game Design & Illustration</span></div>
-      </div>
-      <div class="gallery-item">
-        <img src="assets/gallery3.jpg" alt="Outdoor adventures">
-        <div class="gallery-overlay"><span>Adventures Outdoors</span></div>
-      </div>
+  <h2>Gallery</h2>
+  <p class="gallery-sub-heading">Sophia when not in lab</p>
+
+  <div class="gallery-grid">
+    <div class="gallery-item">
+      <img src="assets/gallery1.jpg" alt="Nature exploration">
+      <div class="gallery-overlay"><span>Nature Exploration</span></div>
     </div>
-  </section>
+
+    <div class="gallery-item">
+      <img src="assets/gallery2.jpg" alt="Game design illustration">
+      <div class="gallery-overlay"><span>Game Design & Illustration</span></div>
+    </div>
+
+    <div class="gallery-item">
+      <img src="assets/gallery3.jpg" alt="Outdoor adventures">
+      <div class="gallery-overlay"><span>Adventures Outdoors</span></div>
+    </div>
+  </div>
+</section>
 
   <!-- 5. Minimalist Graphic Icon Contact Section -->
-  <section id="contact" class="section">
-    <h2>Contact</h2>
-    <div class="contact-icon-grid">
-      
-      <a href="mailto:yfshan@email.com" class="contact-tile">
-        <div class="contact-icon"><i class="fa-solid fa-envelope"></i></div>
-        <div class="contact-label">Email</div>
-        <div class="contact-value">yfshan@email.com</div>
-      </a>
+  <section id="contact" class="section contact-section">
+  <h2>Contact</h2>
 
-      <a href="https://github.com/SophiaShanyf" target="_blank" class="contact-tile">
-        <div class="contact-icon"><i class="fa-brands fa-github"></i></div>
-        <div class="contact-label">GitHub</div>
-        <div class="contact-value">SophiaShanyf</div>
-      </a>
+  <div class="contact-content">
 
-      <a href="https://www.linkedin.com/in/sophia-yufei-shan-/" target="_blank" class="contact-tile">
-        <div class="contact-icon"><i class="fa-brands fa-linkedin"></i></div>
-        <div class="contact-label">LinkedIn</div>
-        <div class="contact-value">Sophia (Yufei) Shan</div>
-      </a>
+    <div class="contact-form-area">
+      <h3>Reach me by email!</h3>
 
+      <form class="contact-form" action="mailto:yfshan@uw.edu" method="POST" enctype="text/plain">
+        <input type="text" name="name" placeholder="Name">
+        <input type="email" name="email" placeholder="Email">
+        <textarea name="message" placeholder="Message"></textarea>
+        <button type="submit">Send</button>
+      </form>
+
+      <div class="contact-info-list">
+        <div class="contact-info-row">
+          <i class="fa-solid fa-envelope"></i>
+          <a href="mailto:yfshan@uw.edu">yfshan@uw.edu</a>
+        </div>
+
+        <div class="contact-info-row">
+          <i class="fa-solid fa-location-dot"></i>
+          <span>Seattle, WA</span>
+        </div>
+      </div>
     </div>
-  </section>
+
+  </div>
+</section>
 
 </body>
 </html>
