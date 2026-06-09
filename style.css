@@ -204,9 +204,35 @@ img {
   margin-bottom: 0.8rem;
 }
 
-.interest-list {
-  padding-left: 1.5rem;
-  font-size: 1.2rem;
+.interests-title {
+  font-size: 1.7rem;
+  margin-top: 2rem;
+  margin-bottom: 1rem;
+}
+
+.interest-keyword-box {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 0.8rem 1rem;
+  max-width: 620px;
+}
+
+.interest-keyword-box span {
+  background: #7fb3e6;
+  color: #ffffff;
+  font-size: 1.05rem;
+  font-weight: 700;
+  text-align: center;
+  padding: 0.75rem 1rem;
+  border-radius: 8px;
+  letter-spacing: 0.01em;
+}
+
+/* Mobile: one keyword per line */
+@media (max-width: 600px) {
+  .interest-keyword-box {
+    grid-template-columns: 1fr;
+  }
 }
 
 /* ==========================================
