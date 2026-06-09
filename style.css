@@ -1,26 +1,15 @@
 /* ==========================================
-   1. Design System & Variables (Light Purple Theme)
+   1. Design System (Minimalist Academic)
    ========================================== */
 :root {
   --bg-primary: #ffffff;
-  --bg-secondary: #faf9fd; /* Very subtle lavender tint background */
-  --text-main: #1e1b4b;    /* Deep indigo text */
-  --text-muted: #4f46e5;   /* Indigo-toned neutral text */
-  --text-body: #474354;    /* Soft readable gray-purple for body paragraph */
+  --text-main: #24292e;       /* Off-black standard typography color */
+  --text-muted: #586069;     /* Subtle muted gray */
+  --text-link-blue: #0366d6; /* Minimal academic link blue */
+  --border-color: #e1e4e8;
   
-  /* Light Purple Palette */
-  --primary: #7c3aed;        /* Bright Amethyst Purple */
-  --primary-hover: #6d28d9;  /* Deep Royal Purple */
-  --accent: #a78bfa;         /* Vibrant Pastel Purple */
-  --accent-light: #f3e8ff;   /* Soft Lavender background highlight */
-  
-  --border-color: #e9e3f8;
-  --radius-sm: 6px;
-  --radius-md: 12px;
-  --radius-lg: 24px;
-  
-  --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-  --max-width: 1100px;
+  --max-width: 1140px;
+  --font-stack: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
 }
 
 /* ==========================================
@@ -37,312 +26,209 @@ html {
 }
 
 body {
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  font-family: var(--font-stack);
   color: var(--text-main);
   background-color: var(--bg-primary);
-  line-height: 1.6;
+  line-height: 1.5;
   -webkit-font-smoothing: antialiased;
 }
 
-h1, h2, h3 {
-  font-weight: 700;
-  letter-spacing: -0.02em;
-  line-height: 1.2;
-}
-
-p {
-  color: var(--text-body);
-}
-
 /* ==========================================
-   3. Navigation Bar (Sticky & Glassmorphism)
+   3. Minimalist Navbar
    ========================================== */
 .navbar {
   position: sticky;
   top: 0;
   z-index: 100;
-  display: flex;
-  justify-content: center;
-  gap: 2.5rem;
-  padding: 1.2rem 2rem;
-  background: rgba(255, 255, 255, 0.85);
-  backdrop-filter: blur(12px);
-  -webkit-backdrop-filter: blur(12px);
-  border-bottom: 1px solid rgba(233, 227, 248, 0.7);
+  background: var(--bg-primary);
+  border-bottom: 1px solid var(--border-color);
+  padding: 1rem 0;
 }
 
-.navbar a {
+.nav-container {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 0 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.nav-branding {
+  font-size: 1.3rem;
+  font-weight: 700;
+  color: var(--text-main);
+  text-decoration: none;
+}
+
+.nav-links {
+  display: flex;
+  gap: 1.5rem;
+}
+
+.nav-links a {
   text-decoration: none;
   color: var(--text-muted);
   font-weight: 500;
-  font-size: 0.95rem;
-  transition: var(--transition-smooth);
-  position: relative;
-  padding: 0.25rem 0;
+  font-size: 1rem;
+  transition: color 0.2s ease;
 }
 
-.navbar a:hover,
-.navbar a:focus {
-  color: var(--primary);
-}
-
-.navbar a::after {
-  content: '';
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  width: 0;
-  height: 2px;
-  background-color: var(--primary);
-  transition: var(--transition-smooth);
-}
-
-.navbar a:hover::after {
-  width: 100%;
+.nav-links a:hover {
+  color: var(--text-main);
 }
 
 /* ==========================================
-   4. Layout & Generic Sections
+   4. Layout Framework
    ========================================== */
 .section {
   max-width: var(--max-width);
   margin: 0 auto;
-  padding: 5.5rem 2rem;
-  border-bottom: 1px solid var(--border-color);
+  padding: 4rem 2rem;
 }
 
-.section:last-of-type {
-  border-bottom: none;
+/* Minimalist separator borders between body sections */
+#news, #projects, #cv, #gallery, #contact {
+  border-top: 1px solid var(--border-color);
 }
 
 .section h2 {
   font-size: 2rem;
-  color: var(--text-main);
-  margin-bottom: 2.5rem;
-  position: relative;
-  display: inline-block;
-}
-
-.section h2::after {
-  content: '';
-  position: absolute;
-  bottom: -8px;
-  left: 0;
-  width: 45px;
-  height: 4px;
-  background: linear-gradient(90deg, var(--primary), var(--accent));
-  border-radius: 2px;
+  font-weight: 700;
+  margin-bottom: 2rem;
 }
 
 /* ==========================================
-   5. Hero Split Section (Equal Height Update)
+   5. Hero Split Section (No Boxes, Open Style)
    ========================================== */
 .hero-split {
   display: grid;
-  grid-template-columns: 1.2fr 1fr;
-  gap: 4.5rem;
-  align-items: stretch; /* Change from center to stretch so columns are identical height */
-  padding-top: 6rem;
-  padding-bottom: 6rem;
+  grid-template-columns: 1fr 1.8fr; /* Gives the text description broader layout presence */
+  gap: 4rem;
+  align-items: flex-start;
+  padding-top: 5rem;
+  padding-bottom: 5rem;
 }
 
 .hero-left {
   text-align: center;
-  background: var(--bg-secondary);
-  padding: 3.5rem 2.5rem;
-  border-radius: var(--radius-lg);
-  border: 1px solid var(--border-color);
-  box-shadow: 0 10px 25px -5px rgba(124, 58, 237, 0.04), 0 8px 10px -6px rgba(124, 58, 237, 0.04);
-  
-  /* Add these 3 lines to center the profile content vertically within the stretched box */
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
+  width: 100%;
 }
 
 .profile-photo-large {
-  width: 190px;
-  height: 190px;
+  width: 240px; /* Made larger to scale like the screenshot layout */
+  height: 240px;
   border-radius: 50%;
   object-fit: cover;
-  
-  /* Forces the flexbox layout to center the image horizontally */
-  margin: -2rem auto 2.5rem auto;
-  
-  border: 4px solid #ffffff;
-  box-shadow: 0 10px 20px -3px rgba(124, 58, 237, 0.2), 0 0 0 2px var(--primary);
+  margin: 0 auto 1.5rem auto;
+  display: block;
 }
 
-.hero-left h1 {
-  font-size: 2rem; /* Scaled up title slightly to match card proportions */
-  margin-bottom: 0.5rem;
-  color: var(--text-main);
+.profile-name {
+  font-size: 2.2rem;
+  font-weight: 400; /* Lighter weight accent style mimicking reference shot */
+  line-height: 1.2;
+  margin-bottom: 0.75rem;
+  color: #000000;
 }
 
 .hero-role {
-  font-weight: 600;
-  color: var(--primary);
+  font-size: 1.1rem;
+  color: var(--text-muted);
   margin-bottom: 0.25rem;
-  font-size: 1.05rem;
 }
 
 .hero-affiliation {
-  font-size: 0.95rem;
-  color: var(--text-muted);
-  margin-bottom: 2.25rem;
+  font-size: 1.1rem;
+  color: var(--text-link-blue); /* Standardized link color style emphasis */
+  margin-bottom: 1.5rem;
 }
 
-/* Biography Right Panel Content */
-.hero-right h2::after {
-  display: none;
+/* Social Icons Styling */
+.social-icons-row {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1.25rem;
+  font-size: 1.8rem;
 }
 
-.hero-right h2 {
+.social-icons-row a {
+  color: var(--text-link-blue);
+  text-decoration: none;
+  transition: opacity 0.2s ease;
+}
+
+.social-icons-row a:hover {
+  opacity: 0.8;
+}
+
+/* Custom Text Icon wrapper matching standard layout styles */
+.cv-text-icon {
+  font-weight: 700;
+  font-size: 1.4rem;
+  font-family: var(--font-stack);
+  line-height: 1;
+}
+
+/* Right Biography Side */
+.bio-title {
   font-size: 2.5rem;
+  font-weight: 400;
   margin-bottom: 1.5rem;
 }
 
 .hero-right p {
   font-size: 1.1rem;
+  color: #333333;
   margin-bottom: 1.5rem;
 }
 
-.hero-right h3 {
-  margin-top: 2rem;
+.interests-title {
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin-top: 2.5rem;
   margin-bottom: 1rem;
-  font-size: 1.25rem;
-  color: var(--text-main);
 }
 
-/* Interactive Purple Highlights */
-.interest-list {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 0.75rem;
+/* Minimalist Interest List with Book icons */
+.minimal-interest-list {
   list-style: none;
-  margin-bottom: 2.5rem;
 }
 
-.interest-list li {
-  background-color: var(--accent-light);
-  color: var(--primary-hover);
-  padding: 0.5rem 1.1rem;
-  border-radius: var(--radius-lg);
-  font-size: 0.9rem;
-  font-weight: 500;
-  border: 1px solid rgba(124, 58, 237, 0.12);
-  transition: var(--transition-smooth);
-}
-
-.interest-list li:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 4px 12px rgba(124, 58, 237, 0.15);
-}
-
-/* ==========================================
-   6. Buttons & Interactions
-   ========================================== */
-.hero-buttons {
+.minimal-interest-list li {
+  font-size: 1.05rem;
+  color: #333333;
+  margin-bottom: 0.5rem;
   display: flex;
-  gap: 1rem;
-}
-
-.button {
-  display: inline-flex;
   align-items: center;
-  justify-content: center;
-  padding: 0.8rem 1.75rem;
-  font-weight: 600;
+  gap: 0.7rem;
+}
+
+.minimal-interest-list i {
+  color: #333333;
   font-size: 0.95rem;
-  text-decoration: none;
-  border-radius: var(--radius-md);
-  transition: var(--transition-smooth);
-  cursor: pointer;
-}
-
-.button:not(.button-outline) {
-  background: linear-gradient(135deg, var(--primary), var(--accent));
-  color: #ffffff;
-  border: none;
-  box-shadow: 0 4px 14px rgba(124, 58, 237, 0.3);
-}
-
-.button:not(.button-outline):hover {
-  transform: translateY(-2px);
-  box-shadow: 0 6px 20px rgba(124, 58, 237, 0.4);
-}
-
-.button-outline {
-  background: transparent;
-  color: var(--primary);
-  border: 2px solid var(--primary);
-}
-
-.button-outline:hover {
-  background: var(--accent-light);
-  transform: translateY(-2px);
-}
-
-.social-links {
-  display: flex;
-  justify-content: center;
-  gap: 0.75rem;
-  flex-wrap: wrap;
-}
-
-.social-links a {
-  text-decoration: none;
-  font-size: 0.85rem;
-  font-weight: 600;
-  color: var(--text-muted);
-  padding: 0.4rem 0.9rem;
-  border-radius: var(--radius-sm);
-  border: 1px solid var(--border-color);
-  background: #ffffff;
-  transition: var(--transition-smooth);
-}
-
-.social-links a:hover {
-  color: var(--primary);
-  border-color: var(--primary);
-  transform: translateY(-1px);
 }
 
 /* ==========================================
-   7. News Timeline
+   6. News Section
    ========================================== */
 .news-list {
   list-style: none;
-  display: flex;
-  flex-direction: column;
-  gap: 1.35rem;
 }
 
 .news-list li {
-  padding-left: 1.75rem;
-  position: relative;
-  color: var(--text-body);
-}
-
-.news-list li::before {
-  content: '';
-  position: absolute;
-  left: 0;
-  top: 0.5rem;
-  width: 8px;
-  height: 8px;
-  border-radius: 50%;
-  background-color: var(--primary);
-  box-shadow: 0 0 0 3px var(--accent-light);
+  margin-bottom: 1rem;
+  font-size: 1.05rem;
+  color: #333333;
 }
 
 .news-list li strong {
   color: var(--text-main);
-  margin-right: 0.5rem;
 }
 
 /* ==========================================
-   8. Project Grid Cards
+   7. Project Cards Container
    ========================================== */
 .card-container {
   display: flex;
@@ -354,169 +240,113 @@ p {
   .card-container {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
+    gap: 1.5rem;
   }
 }
 
 .card {
   background: #ffffff;
   border: 1px solid var(--border-color);
-  border-radius: var(--radius-md);
+  border-radius: 6px;
   overflow: hidden;
-  transition: var(--transition-smooth);
-  display: flex;
-  flex-direction: column;
-  box-shadow: 0 4px 6px -1px rgba(124, 58, 237, 0.01);
-}
-
-.card:hover {
-  transform: translateY(-6px);
-  border-color: rgba(124, 58, 237, 0.25);
-  box-shadow: 0 12px 25px -5px rgba(124, 58, 237, 0.1), 0 8px 16px -6px rgba(124, 58, 237, 0.06);
 }
 
 .card img {
   width: 100%;
-  height: 180px;
+  height: 160px;
   object-fit: cover;
   border-bottom: 1px solid var(--border-color);
-  transition: var(--transition-smooth);
-}
-
-.card:hover img {
-  transform: scale(1.02);
 }
 
 .card h3 {
-  font-size: 1.15rem;
-  padding: 1.25rem 1.25rem 0.5rem 1.25rem;
-  color: var(--text-main);
+  font-size: 1.1rem;
+  padding: 1rem 1rem 0.5rem 1rem;
 }
 
 .card p {
   font-size: 0.95rem;
-  color: var(--text-body);
-  padding: 0 1.25rem 1.5rem 1.25rem;
-  flex-grow: 1;
+  color: var(--text-muted);
+  padding: 0 1rem 1.25rem 1rem;
 }
 
 /* ==========================================
-   9. Contact Settings
+   8. Text Links & Contact
    ========================================== */
-#contact p {
-  margin-bottom: 1rem;
-  font-size: 1.05rem;
-}
-
-#contact a {
-  color: var(--primary);
+.text-link, #contact a {
+  color: var(--text-link-blue);
   text-decoration: none;
-  font-weight: 500;
-  transition: var(--transition-smooth);
 }
 
-#contact a:hover {
-  color: var(--primary-hover);
+.text-link:hover, #contact a:hover {
   text-decoration: underline;
 }
 
-/* ==========================================
-   10. Responsiveness
-   ========================================== */
-@media (max-width: 950px) {
-  .hero-split {
-    grid-template-columns: 1fr;
-    gap: 3.5rem;
-    padding-top: 2rem;
-  }
-  
-  .hero-left {
-    max-width: 500px;
-    margin: 0 auto;
-    width: 100%;
-  }
-  
-  .navbar {
-    gap: 1.25rem;
-    padding: 1rem;
-  }
+#contact p {
+  font-size: 1.05rem;
+  margin-bottom: 0.5rem;
 }
 
 /* ==========================================
-   11. Gallery Grid & Hover System
+   9. Gallery Settings
    ========================================== */
 .gallery-subtitle {
-  font-size: 1.05rem;
   color: var(--text-muted);
-  margin-bottom: 2rem;
-  margin-top: -1.5rem;
+  margin-bottom: 1.5rem;
+  margin-top: -1rem;
 }
 
 .gallery-grid {
-  display: flex;
-  flex-direction: column;
-  gap: 1.5rem;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1rem;
 }
 
 @media (min-width: 768px) {
   .gallery-grid {
-    display: grid;
     grid-template-columns: repeat(3, 1fr);
-    gap: 1.5rem;
   }
 }
 
 .gallery-item {
   position: relative;
-  border-radius: var(--radius-md);
+  height: 200px;
   overflow: hidden;
-  height: 250px;
+  border-radius: 4px;
   border: 1px solid var(--border-color);
-  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.02);
-  transition: var(--transition-smooth);
 }
 
 .gallery-item img {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  transition: var(--transition-smooth);
-}
-
-.gallery-item:hover {
-  transform: translateY(-4px);
-  box-shadow: 0 10px 20px rgba(124, 58, 237, 0.1);
-}
-
-.gallery-item:hover img {
-  transform: scale(1.05);
 }
 
 .gallery-overlay {
   position: absolute;
-  top: 0;
-  left: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.7);
   width: 100%;
-  height: 100%;
-  background: linear-gradient(to top, rgba(30, 27, 75, 0.85), rgba(124, 58, 237, 0.4));
-  display: flex;
-  align-items: flex-end;
-  padding: 1.5rem;
-  opacity: 0;
-  transition: var(--transition-smooth);
-}
-
-.gallery-item:hover .gallery-overlay {
-  opacity: 1;
+  padding: 0.5rem 1rem;
 }
 
 .gallery-overlay span {
   color: #ffffff;
-  font-weight: 600;
-  font-size: 1.1rem;
-  transform: translateY(10px);
-  transition: var(--transition-smooth);
+  font-size: 0.9rem;
 }
 
-.gallery-item:hover .gallery-overlay span {
-  transform: translateY(0);
+/* ==========================================
+   10. Mobile Responsiveness Settings
+   ========================================== */
+@media (max-width: 850px) {
+  .hero-split {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+    padding-top: 2rem;
+  }
+  
+  .nav-container {
+    flex-direction: column;
+    gap: 1rem;
+    text-align: center;
+  }
 }
