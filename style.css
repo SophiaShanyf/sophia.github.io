@@ -167,7 +167,7 @@ p {
   object-fit: cover;
   
   /* Forces the flexbox layout to center the image horizontally */
-  margin: 0 auto 1.75rem auto; 
+  margin: -2rem auto 2.5rem auto;
   
   border: 4px solid #ffffff;
   box-shadow: 0 10px 20px -3px rgba(124, 58, 237, 0.2), 0 0 0 2px var(--primary);
