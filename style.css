@@ -382,12 +382,33 @@ img {
    Gallery Section
    ========================================== */
 
+.gallery-heading-row {
+  display: flex;
+  align-items: baseline;
+  gap: 1rem;
+  margin-bottom: 2rem;
+}
+
+.gallery-heading-row h2 {
+  margin-bottom: 0;
+}
+
 .gallery-sub-heading {
   font-size: 1.25rem;
   color: var(--text-link-blue);
-  margin-top: -1.2rem;
-  margin-bottom: 2rem;
   font-weight: 500;
+}
+
+/* Optional: stacks nicely on small screens */
+@media (max-width: 600px) {
+  .gallery-heading-row {
+    flex-direction: column;
+    gap: 0.2rem;
+  }
+
+  .gallery-sub-heading {
+    font-size: 1.1rem;
+  }
 }
 
 .gallery-grid {
