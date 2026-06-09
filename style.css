@@ -191,23 +191,31 @@ body {
   margin-bottom: 1rem;
 }
 
-/* Minimalist Interest List with Book icons */
-.minimal-interest-list {
-  list-style: none;
-}
-
-.minimal-interest-list li {
-  font-size: 1.05rem;
-  color: #333333;
-  margin-bottom: 0.5rem;
+/* ==========================================
+   Minimalist Light Blue Interest Tags
+   ========================================== */
+.interest-list {
   display: flex;
-  align-items: center;
-  gap: 0.7rem;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  list-style: none;
+  margin-top: 1rem;
 }
 
-.minimal-interest-list i {
-  color: #333333;
-  font-size: 0.95rem;
+.interest-list li {
+  background-color: #f0f6fc;     /* Soft, clean light blue background hint */
+  color: var(--text-link-blue);  /* Matches the exact blue of your icons and links */
+  padding: 0.5rem 1rem;
+  border-radius: 6px;            /* Clean, modern edge radius matching your screenshot style */
+  font-size: 1.15rem;            /* Scales cleanly with your updated 2pt larger size */
+  font-weight: 500;
+  border: 1px solid #c8e1ff;     /* Subtle light blue border accent line */
+  transition: background-color 0.2s ease, border-color 0.2s ease;
+}
+
+.interest-list li:hover {
+  background-color: #ddebfa;     /* Slightly deeper light blue contrast on hover */
+  border-color: #a3cdfe;
 }
 
 /* ==========================================
