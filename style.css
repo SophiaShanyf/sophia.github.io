@@ -1,360 +1,168 @@
 /* ==========================================
-   1. Design System (Minimalist Academic)
+   1. Specific Feature Typography Rules
    ========================================== */
-:root {
-  --bg-primary: #ffffff;
-  --text-main: #24292e;       /* Off-black standard typography color */
-  --text-muted: #586069;     /* Subtle muted gray */
-  --text-link-blue: #0366d6; /* Minimal academic link blue */
-  --border-color: #e1e4e8;
-  
-  --max-width: 1140px;
-  --font-stack: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
-}
-
-/* ==========================================
-   2. Base Reset & Typography
-   ========================================== */
-* {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
-}
-
-html {
-  scroll-behavior: smooth;
-}
-
-body {
-  font-family: var(--font-stack);
-  color: var(--text-main);
-  background-color: var(--bg-primary);
-  line-height: 1.5;
-  -webkit-font-smoothing: antialiased;
-}
-
-/* ==========================================
-   3. Minimalist Navbar
-   ========================================== */
-.navbar {
-  position: sticky;
-  top: 0;
-  z-index: 100;
-  background: var(--bg-primary);
-  border-bottom: 1px solid var(--border-color);
-  padding: 1rem 0;
-}
-
-.nav-container {
-  max-width: var(--max-width);
-  margin: 0 auto;
-  padding: 0 2rem;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-
-.nav-branding {
-  font-size: 1.3rem;
+.bio-title {
+  font-family: 'Montserrat', sans-serif; /* 1. Montserrat Applied */
+  font-size: 3.2rem;                     /* 1. Made noticeably larger */
   font-weight: 700;
-  color: var(--text-main);
-  text-decoration: none;
-}
-
-.nav-links {
-  display: flex;
-  gap: 1.5rem;
-}
-
-.nav-links a {
-  text-decoration: none;
-  color: var(--text-muted);
-  font-weight: 500;
-  font-size: 1rem;
-  transition: color 0.2s ease;
-}
-
-.nav-links a:hover {
-  color: var(--text-main);
+  margin-bottom: 1.5rem;
+  letter-spacing: -0.5px;
 }
 
 /* ==========================================
-   4. Layout Framework
+   2. News Highlight Box & Top Bold Rule
    ========================================== */
-.section {
-  max-width: var(--max-width);
-  margin: 0 auto;
-  padding: 4rem 2rem;
+.news-highlight-box {
+  background-color: #f8f9fa;             /* Light gray surface color */
+  border-radius: 8px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05); /* 2. Smooth light shadow highlight */
+  margin-top: 2rem !important;
+  margin-bottom: 2rem !important;
 }
 
-/* Minimalist separator borders between body sections */
-#news, #projects, #cv, #gallery, #contact {
-  border-top: 1px solid var(--border-color);
-}
-
-.section h2 {
-  font-size: 2rem;
-  font-weight: 700;
-  margin-bottom: 2rem;
+.latest-news-item {
+  font-weight: 700;                     /* 2. Forces top item text bolder */
+  color: #000000 !important;
 }
 
 /* ==========================================
-   5. Hero Split Section (No Boxes, Open Style)
+   3. Linked Project Box System
    ========================================== */
-.hero-split {
-  display: grid;
-  grid-template-columns: 1fr 1.8fr; /* Gives the text description broader layout presence */
-  gap: 4rem;
-  align-items: flex-start;
-  padding-top: 5rem;
-  padding-bottom: 5rem;
-}
-
-.hero-left {
-  text-align: center;
-  width: 100%;
-}
-
-.profile-photo-large {
-  width: 240px; /* Made larger to scale like the screenshot layout */
-  height: 240px;
-  border-radius: 50%;
-  object-fit: cover;
-  margin: 0 auto 1.5rem auto;
+.card-link-wrapper {
+  text-decoration: none;
+  color: inherit;
   display: block;
 }
 
-.profile-name {
-  font-size: 2.2rem;
-  font-weight: 400; /* Lighter weight accent style mimicking reference shot */
-  line-height: 1.2;
-  margin-bottom: 0.75rem;
-  color: #000000;
-}
-
-.hero-role {
-  font-size: 1.1rem;
-  color: var(--text-muted);
-  margin-bottom: 0.25rem;
-}
-
-.hero-affiliation {
-  font-size: 1.1rem;
-  color: var(--text-link-blue); /* Standardized link color style emphasis */
-  margin-bottom: 1.5rem;
-}
-
-/* Social Icons Styling */
-.social-icons-row {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 1.25rem;
-  font-size: 1.8rem;
-}
-
-.social-icons-row a {
-  color: var(--text-link-blue);
-  text-decoration: none;
-  transition: opacity 0.2s ease;
-}
-
-.social-icons-row a:hover {
-  opacity: 0.8;
-}
-
-/* Custom Text Icon wrapper matching standard layout styles */
-.cv-text-icon {
-  font-weight: 700;
-  font-size: 1.4rem;
-  font-family: var(--font-stack);
-  line-height: 1;
-}
-
-/* Right Biography Side */
-.bio-title {
-  font-size: 2.5rem;
-  font-weight: 400;
-  margin-bottom: 1.5rem;
-}
-
-.hero-right p {
-  font-size: 1.1rem;
-  color: #333333;
-  margin-bottom: 1.5rem;
-}
-
-.interests-title {
-  font-size: 1.5rem;
-  font-weight: 700;
-  margin-top: 2.5rem;
-  margin-bottom: 1rem;
-}
-
-/* ==========================================
-   Minimalist Light Blue Interest Tags
-   ========================================== */
-.interest-list {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 0.75rem;
-  list-style: none;
-  margin-top: 1rem;
-}
-
-.interest-list li {
-  background-color: #f0f6fc;     /* Soft, clean light blue background hint */
-  color: var(--text-link-blue);  /* Matches the exact blue of your icons and links */
-  padding: 0.5rem 1rem;
-  border-radius: 6px;            /* Clean, modern edge radius matching your screenshot style */
-  font-size: 1.15rem;            /* Scales cleanly with your updated 2pt larger size */
-  font-weight: 500;
-  border: 1px solid #c8e1ff;     /* Subtle light blue border accent line */
-  transition: background-color 0.2s ease, border-color 0.2s ease;
-}
-
-.interest-list li:hover {
-  background-color: #ddebfa;     /* Slightly deeper light blue contrast on hover */
-  border-color: #a3cdfe;
-}
-
-/* ==========================================
-   6. News Section
-   ========================================== */
-.news-list {
-  list-style: none;
-}
-
-.news-list li {
-  margin-bottom: 1rem;
-  font-size: 1.05rem;
-  color: #333333;
-}
-
-.news-list li strong {
-  color: var(--text-main);
-}
-
-/* ==========================================
-   7. Project Cards Container
-   ========================================== */
-.card-container {
-  display: flex;
-  flex-direction: column;
-  gap: 2rem;
-}
-
-@media (min-width: 768px) {
-  .card-container {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 1.5rem;
-  }
+.card-link-wrapper:hover .card {
+  border-color: var(--text-link-blue);
+  transform: translateY(-4px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.05);
+  transition: all 0.2s ease-in-out;
 }
 
 .card {
-  background: #ffffff;
-  border: 1px solid var(--border-color);
-  border-radius: 6px;
-  overflow: hidden;
-}
-
-.card img {
-  width: 100%;
-  height: 160px;
-  object-fit: cover;
-  border-bottom: 1px solid var(--border-color);
-}
-
-.card h3 {
-  font-size: 1.1rem;
-  padding: 1rem 1rem 0.5rem 1rem;
-}
-
-.card p {
-  font-size: 0.95rem;
-  color: var(--text-muted);
-  padding: 0 1rem 1.25rem 1rem;
+  transition: all 0.2s ease-in-out;
 }
 
 /* ==========================================
-   8. Text Links & Contact
+   4. Dual-Line Gallery Titles
    ========================================== */
-.text-link, #contact a {
-  color: var(--text-link-blue);
-  text-decoration: none;
-}
-
-.text-link:hover, #contact a:hover {
-  text-decoration: underline;
-}
-
-#contact p {
-  font-size: 1.05rem;
-  margin-bottom: 0.5rem;
+.gallery-sub-heading {
+  display: block;
+  font-size: 1.25rem;                   /* 4. Smaller text on separate line */
+  color: var(--text-muted);
+  margin-top: -1.5rem;
+  margin-bottom: 2rem;
+  font-weight: 400;
 }
 
 /* ==========================================
-   9. Gallery Settings
+   5. Graphic Icon Contact Tiles
    ========================================== */
-.gallery-subtitle {
-  color: var(--text-muted);
-  margin-bottom: 1.5rem;
-  margin-top: -1rem;
-}
-
-.gallery-grid {
+.contact-icon-grid {
   display: grid;
   grid-template-columns: 1fr;
-  gap: 1rem;
+  gap: 1.5rem;
+  margin-top: 2rem;
 }
 
 @media (min-width: 768px) {
-  .gallery-grid {
-    grid-template-columns: repeat(3, 1fr);
+  .contact-icon-grid {
+    grid-template-columns: repeat(3, 1fr); /* 3 clean columns matching your card framework */
   }
 }
 
-.gallery-item {
-  position: relative;
-  height: 200px;
-  overflow: hidden;
-  border-radius: 4px;
+.contact-tile {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: 2rem;
+  background: #ffffff;
   border: 1px solid var(--border-color);
+  border-radius: 8px;
+  text-decoration: none;
+  color: var(--text-main);
+  transition: all 0.2s ease;
 }
 
-.gallery-item img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
+.contact-tile:hover {
+  border-color: var(--text-link-blue);
+  box-shadow: 0 4px 12px rgba(3, 102, 214, 0.08);
 }
 
-.gallery-overlay {
-  position: absolute;
-  bottom: 0;
-  background: rgba(0, 0, 0, 0.7);
-  width: 100%;
-  padding: 0.5rem 1rem;
+.contact-icon {
+  font-size: 2.2rem;
+  color: var(--text-link-blue);
+  margin-bottom: 0.75rem;
 }
 
-.gallery-overlay span {
-  color: #ffffff;
-  font-size: 0.9rem;
+.contact-label {
+  font-weight: 700;
+  font-size: 1.2rem;
+  margin-bottom: 0.25rem;
+}
+
+.contact-value {
+  font-size: 1.1rem;
+  color: var(--text-muted);
 }
 
 /* ==========================================
-   10. Mobile Responsiveness Settings
+   6. Academic Experience Timeline Style
    ========================================== */
-@media (max-width: 850px) {
-  .hero-split {
-    grid-template-columns: 1fr;
-    gap: 2rem;
-    padding-top: 2rem;
-  }
-  
-  .nav-container {
-    flex-direction: column;
-    gap: 1rem;
-    text-align: center;
-  }
+.timeline-container {
+  position: relative;
+  border-left: 2px solid var(--border-color); /* The left vertical spine line */
+  padding-left: 2rem;
+  margin-left: 1rem;
+  margin-top: 2rem;
+}
+
+.timeline-item {
+  position: relative;
+  margin-bottom: 3rem;
+}
+
+.timeline-item:last-child {
+  margin-bottom: 0;
+}
+
+/* Timeline dot indicators */
+.timeline-item::before {
+  content: '';
+  position: absolute;
+  left: calc(-2rem - 7px); /* Centers dot on top of the left vertical line border */
+  top: 0.35rem;
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background: var(--bg-primary);
+  border: 2px solid var(--text-link-blue);
+}
+
+.timeline-date {
+  font-size: 1.15rem;
+  font-weight: 700;
+  color: var(--text-link-blue);
+  margin-bottom: 0.4rem;
+}
+
+.timeline-content h3 {
+  font-size: 1.4rem;
+  font-weight: 600;
+  color: var(--text-main);
+}
+
+.timeline-org {
+  font-size: 1.2rem;
+  font-weight: 500;
+  color: var(--text-muted);
+  margin-bottom: 0.5rem;
+}
+
+.timeline-content p {
+  font-size: 1.2rem;
+  color: #444444;
 }
