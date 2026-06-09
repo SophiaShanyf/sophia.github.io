@@ -135,13 +135,13 @@ p {
 }
 
 /* ==========================================
-   5. Hero Split Section (Expanded Profile Width)
+   5. Hero Split Section (Equal Height Update)
    ========================================== */
 .hero-split {
   display: grid;
-  grid-template-columns: 1.2fr 1fr; /* Swapped proportions to make the profile card larger */
+  grid-template-columns: 1.2fr 1fr;
   gap: 4.5rem;
-  align-items: center;
+  align-items: stretch; /* Change from center to stretch so columns are identical height */
   padding-top: 6rem;
   padding-bottom: 6rem;
 }
@@ -153,6 +153,11 @@ p {
   border-radius: var(--radius-lg);
   border: 1px solid var(--border-color);
   box-shadow: 0 10px 25px -5px rgba(124, 58, 237, 0.04), 0 8px 10px -6px rgba(124, 58, 237, 0.04);
+  
+  /* Add these 3 lines to center the profile content vertically within the stretched box */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
 .profile-photo-large {
