@@ -1,212 +1,113 @@
----
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Home | Sophia (Yufei) Shan</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
 
-title: Home
+  <nav class="navbar">
+    <a href="#home">Home</a>
+    <a href="#news">News</a>
+    <a href="#projects">Projects</a>
+    <a href="#cv">CV</a>
+    <a href="#contact">Contact</a>
+  </nav>
 
----
+  <section id="home" class="section hero-split">
+    <div class="hero-left">
+      <img src="assets/profile.jpg" alt="Profile photo" class="profile-photo-large">
 
+      <h1>Sophia (Yufei) Shan</h1>
 
+      <p class="hero-role">Ph.D. Student in Bioengineering</p>
+      <p class="hero-affiliation">University of Washington</p>
 
-<link rel="stylesheet" href="style.css">
-
-
-
-<nav class="navbar">
-
-  <a href="#home">Home</a>
-
-  <a href="#news">News</a>
-
-  <a href="#projects">Projects</a>
-
-  <a href="#cv">CV</a>
-
-  <a href="#contact">Contact</a>
-
-</nav>
-
-
-
-<section id="home" class="section hero-split">
-
-  <div class="hero-left">
-
-    <img src="assets/profile.jpg" alt="Profile photo" class="profile-photo-large">
-
-
-
-    <h1>Sophia (Yufei) Shan</h1>
-
-
-
-    <p class="hero-role">Ph.D. Student in Bioengineering</p>
-
-    <p class="hero-affiliation">University of Washington</p>
-
-
-
-    <div class="social-links">
-
-      <a href="mailto:yfshan@email.com" aria-label="Email">Email</a>
-
-      <a href="https://github.com/SophiaShanyf" target="_blank" aria-label="GitHub">GitHub</a>
-
-      <a href="https://www.linkedin.com/in/sophia-yufei-shan-/" target="_blank" aria-label="LinkedIn">LinkedIn</a>
-
-      <a href="assets/cv.pdf" target="_blank" aria-label="CV">CV</a>
-
+      <div class="social-links">
+        <a href="mailto:yfshan@email.com" aria-label="Email">Email</a>
+        <a href="https://github.com/SophiaShanyf" target="_blank" aria-label="GitHub">GitHub</a>
+        <a href="https://www.linkedin.com/in/sophia-yufei-shan-/" target="_blank" aria-label="LinkedIn">LinkedIn</a>
+        <a href="assets/SophiaShan_cv_april_2026.pdf" target="_blank" aria-label="CV">CV</a>
+      </div>
     </div>
 
-  </div>
+    <div class="hero-right">
+      <h2>Biography</h2>
+      <p>
+        Hello! I am currently a third-year Ph.D. student in Bioengineering at the
+        University of Washington, mentored by Dr. Azadeh Yazdan-Shahmorad. My research
+        focuses on refining approaches to engineer neuroplasticity for translational
+        neurotechnology applications.
+      </p>
+      <p>
+        Combining electrophysiology, neuromodulation, and computational
+        modeling, I aim to better understand cortical plasticity in primates
+        and advance the design of targeted neuromodulation strategies. 
+      </p>
 
+      <h3>Interests</h3>
+      <ul class="interest-list">
+        <li>Neurotechnology</li>
+        <li>Neuromodulation</li>
+        <li>Brain-Computer Interfaces</li>
+        <li>Neural Plasticity</li>
+      </ul>
 
+      <div class="hero-buttons">
+        <a class="button" href="#projects">View Projects</a>
+        <a class="button button-outline" href="assets/SophiaShan_cv_april_2026.pdf" target="_blank">Open CV</a>
+      </div>
+    </div>
+  </section>
 
-  <div class="hero-right">
-
-    <h2>Biography</h2>
-
-    <p>
-
-      Hello! I am currently a third-year Ph.D. student in Bioengineering at the
-
-      University of Washington, mentored by Dr. Azadeh Yazdan-Shahmorad. My research
-
-      focuses on refining approaches to engineer neuroplasticity for translational
-
-      neurotechnology applications.
-
-    </p>
-
-    <p>
-
-      Combining electrophysiology, neuromodulation, and computational
-
-      modeling, I aim to better understand cortical plasticity in primates
-
-      and advance the design of targeted neuromodulation strategies. 
-
-    </p>
-
-
-
-    <h3>Interests</h3>
-
-    <ul class="interest-list">
-
-      <li>Neurotechnology</li>
-
-      <li>Neuromodulation</li>
-
-      <li>Brain-Computer Interfaces</li>
-
-      <li>Neural Plasticity</li>
-
-     
-
+  <section id="news" class="section">
+    <h2>News</h2>
+    <ul class="news-list">
+      <li><strong>May 2026:</strong> I'm accepted to the Allen Institute's Modeling Software Workshop!</li>
+      <li><strong>March 2026:</strong> I gave a talk at the CNC Forum at UW on regional-specific neural plasticity prediction.</li>
+      <li><strong>Jan 2026:</strong> I was awarded the CoNECT and Weill NeuroHUB Student Travel Grant.</li>
+      <li><strong>July 2025:</strong> I gave a talk on the Neural Vascular Dynamics after Ischemic Stroke at EMBC 2025 Annual International Conference.</li>
+      <li><strong>Sep 2024:</strong> I was awarded the UW Herbold Fellowship for the 2024-2025 academic year.</li>
     </ul>
+  </section>
 
+  <section id="projects" class="section">
+    <h2>Projects</h2>
+    
+    <div class="card-container">
+      <div class="card">
+        <img src="assets/project3.jpg" alt="Project 1 image">
+        <h3>Neurovascular Unit Instability during Ischemic Stroke</h3>
+        <p>Studying the neural and neurovascular unit response due to ischemic stroke induced using the photothrombotic lesion technique in NHP.</p>
+      </div>
 
+      <div class="card">
+        <img src="assets/project1.jpg" alt="Project 2 image">
+        <h3>Inferring Regional Cortical Plasticity using Correlation-based Prediction Model</h3>
+        <p>A correlation-based functional connectivity prediction model inspired by Kempter's theorem to infer regional-specific cortical plasticity.</p>
+      </div>
 
-    <div class="hero-buttons">
-
-      <a class="button" href="#projects">View Projects</a>
-
-      <a class="button button-outline" href="assets/SophiaShan_cv_april_2026.pdf" target="_blank">Open CV</a>
-
+      <div class="card">
+        <img src="assets/project2.jpg" alt="Project 3 image">
+        <h3>Encephalophone: a music BCI</h3>
+        <p>A musical brain-computer interface using motor cortex EEG features to produce intentional and real-time music tone production.</p>
+      </div>
     </div>
+  </section>
 
-  </div>
+  <section id="cv" class="section">
+    <h2>CV</h2>
+    <p><a class="button" href="assets/SophiaShan_cv_april_2026.pdf" target="_blank">Open CV</a></p>
+  </section>
 
-</section>
+  <section id="contact" class="section">
+    <h2>Contact</h2>
+    <p>Email: <a href="mailto:yfshan@email.com">yfshan@email.com</a></p>
+    <p>GitHub: <a href="https://github.com/SophiaShanyf" target="_blank">github.com/SophiaShanyf</a></p>
+    <p>LinkedIn: <a href="https://www.linkedin.com/in/sophia-yufei-shan-/" target="_blank">linkedin.com/in/sophia-yufei-shan-/</a></p>
+  </section>
 
-
-
-<section id="news" class="section">
-
-  <h2>News</h2>
-
-  <ul class="news-list">
-
-    <li><strong>May 2026:</strong> I'm accepted to the Allen Institute's Modeling Software Workshop! </li>
-
-    <li><strong>March 2026:</strong> I gave a talk at the CNC Forum at UW on regional-specific neural plasticity prediction.</li>
-
-    <li><strong>Jan 2026:</strong> I was awarded the CoNECT and Weill NeuroHUB Student Travel Grant.</li>
-
-    <li><strong>July 2025:</strong> I gave a talk on the Neural Vascular Dynamics after Ischemic Stroke at EMBC 2025 Annual International Conference.</li>
-
-    <li><strong>Sep 2024:</strong> I was awarded the UW Herbold Fellowship for the 2024-2025 academic year.</li>
-
-  </ul>
-
-</section>
-
-
-
-<section id="projects" class="section">
-  <h2>Projects</h2>
-
-  <div class="card-container">
-
-    <div class="card">
-      <img src="assets/project3.jpg" alt="Project 1 image">
-      <h3>Neurovascular Unit Instability during Ischemic Stroke</h3>
-      <p>Studying the neural and neurovascular unit response due to ischemic stroke induced using the photothrombotic lesion technique in NHP.</p>
-    </div>
-
-    <div class="card">
-      <img src="assets/project1.jpg" alt="Project 2 image">
-      <h3>Inferring Regional Cortical Plasticity using Correlation-based Prediction Model</h3>
-      <p>A correlation-based functional connectivity prediction model inspired by Kempter's theorem to infer regional-specific cortical plasticity.</p>
-    </div>
-
-    <div class="card">
-      <img src="assets/project2.jpg" alt="Project 3 image">
-      <h3>Encephalophone: a music BCI</h3>
-      <p>A musical brain-computer interface using motor cortex EEG features to produce intentional and real-time music tone production.</p>
-    </div>
-
-  </div> </section>
-
-
-
-  <div class="card">
-
-    <img src="assets/project2.jpg" alt="Project 3 image">
-
-    <h3>Encephalophone: a music BCI </h3>
-
-    <p>A musical brain-computer interface using motor cortex EEG features to produce intentional and real-time music tone production.</p>
-
-  </div>
-
-
-
-  
-
-</section>
-
-
-
-<section id="cv" class="section">
-
-  <h2>CV</h2>
-
-  <p><a class="button" href="assets/SophiaShan_cv_april_2026.pdf" target="_blank">Open CV</a></p>
-
-  
-
-</section>
-
-
-
-<section id="contact" class="section">
-
-  <h2>Contact</h2>
-
-  <p>Email: <a href="mailto:yfshan@email.com">yfshan@email.com</a></p>
-
-  <p>GitHub: <a href="https://github.com/SophiaShanyf" target="_blank">github.com/SophiaShanyf</a></p>
-
-  <p>LinkedIn: <a href="https://www.linkedin.com/in/sophia-yufei-shan-/" target="_blank">linkedin.com/in/sophia-yufei-shan-/</a></p>
-
-</section>
+</body>
+</html>
