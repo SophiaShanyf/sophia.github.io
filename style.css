@@ -989,6 +989,114 @@ img {
   }
 }
 
+     /* ==========================================
+   Contact Message Box
+   ========================================== */
+
+.contact-message-box {
+  margin-top: 2.5rem;
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  gap: 2rem;
+  align-items: center;
+
+  background: #f7fbff;
+  border: 1px solid #d8e8fb;
+  border-radius: 14px;
+  padding: 2rem;
+  box-shadow: 0 8px 22px rgba(0, 0, 0, 0.05);
+}
+
+.contact-message-text h3 {
+  font-size: 1.55rem;
+  font-weight: 800;
+  color: var(--text-main);
+  margin-bottom: 0.35rem;
+}
+
+.contact-message-text p {
+  font-size: 1.15rem;
+  color: var(--text-link-blue);
+  font-weight: 500;
+}
+
+.quick-message-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.quick-message-form textarea {
+  width: 100%;
+  min-height: 130px;
+  resize: vertical;
+
+  border: 1px solid #cfd8e3;
+  border-radius: 10px;
+  padding: 1rem 1.1rem;
+
+  font-family: inherit;
+  font-size: 1.05rem;
+  color: var(--text-main);
+  background: #ffffff;
+}
+
+.quick-message-form textarea::placeholder,
+.quick-message-form input::placeholder {
+  color: #7b8494;
+}
+
+.message-form-bottom {
+  display: grid;
+  grid-template-columns: 1fr 130px;
+  gap: 1rem;
+}
+
+.message-form-bottom input {
+  border: 1px solid #cfd8e3;
+  border-radius: 10px;
+  padding: 0.85rem 1rem;
+
+  font-family: inherit;
+  font-size: 1rem;
+  color: var(--text-main);
+  background: #ffffff;
+}
+
+.message-form-bottom button {
+  border: none;
+  border-radius: 10px;
+  background: var(--text-link-blue);
+  color: #ffffff;
+
+  font-size: 1rem;
+  font-weight: 700;
+  cursor: pointer;
+  transition: opacity 0.2s ease, transform 0.2s ease;
+}
+
+.message-form-bottom button:hover {
+  opacity: 0.9;
+  transform: translateY(-2px);
+}
+
+/* Responsive */
+@media (max-width: 800px) {
+  .contact-message-box {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 520px) {
+  .message-form-bottom {
+    grid-template-columns: 1fr;
+  }
+
+  .message-form-bottom button {
+    padding: 0.9rem;
+  }
+}
+     
 /* ==========================================
    Responsive Layout
    ========================================== */
