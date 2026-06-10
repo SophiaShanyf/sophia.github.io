@@ -210,7 +210,7 @@
 
     <!-- Subject 1 -->
     <div class="gallery-subject">
-      <button class="subject-cover" type="button" onclick="toggleGallerySubject(this)">
+      <button class="subject-cover" 
         <img src="assets/gallery/karam.jpg" alt="Crochet projects">
         <div class="image-overlay">
           <span>a couch pillow</span>
@@ -256,7 +256,7 @@
 
     <!-- Subject 2 -->
     <div class="gallery-subject">
-      <button class="subject-cover" type="button" onclick="toggleGallerySubject(this)">
+      <button class="subject-cover" 
         <img src="assets/gallery/two_cats.jpg" alt="Crochet and creative projects">
         <div class="image-overlay">
           <span>My cats :3 </span>
@@ -293,7 +293,7 @@
 
     <!-- Subject 3 -->
     <div class="gallery-subject">
-      <button class="subject-cover" type="button" onclick="toggleGallerySubject(this)">
+      <button class="subject-cover"
         <img src="assets/gallery/cheese_tasting.jpg" alt="Cats and shelter volunteering">
         <div class="image-overlay">
           <span> Cheese Tasting at Girls' night</span>
@@ -368,11 +368,6 @@
 
   </div>
 </section>
-<script>
-  function toggleGallerySubject(button) {
-    const subject = button.closest('.gallery-subject');
-    subject.classList.toggle('open');
-  }
-</script>
+
 </body>
 </html>
