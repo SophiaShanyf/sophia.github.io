@@ -558,15 +558,15 @@ img {
   }
 </script>
 
-     /* ==========================================
+  /* ==========================================
    Gallery Section
    ========================================== */
 
 .gallery-heading-row {
   display: flex;
   align-items: baseline;
-  gap: 1rem;
-  margin-bottom: 2.5rem;
+  gap: 2rem;                 /* tab-like spacing between Gallery and subtitle */
+  margin-bottom: 3.5rem;     /* more space between heading and photo cards */
 }
 
 .gallery-heading-row h2 {
@@ -574,16 +574,16 @@ img {
 }
 
 .gallery-sub-heading {
-  font-size: 1.25rem;
+  font-size: 1.3rem;
   color: var(--text-link-blue);
   font-weight: 500;
 }
 
-/* Three large subject images in one row */
+/* Three large subject cards in one row */
 .subject-gallery {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 1.8rem;
+  gap: 2.2rem;
   align-items: start;
 }
 
@@ -615,6 +615,16 @@ img {
   display: block;
 }
 
+/* Title under each large photo card */
+.subject-title {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: var(--text-main);
+  margin-top: 0.85rem;
+  margin-bottom: 1rem;
+  text-align: center;
+}
+
 /* Open-state highlight */
 .gallery-subject.open .subject-cover {
   outline: 3px solid rgba(31, 110, 203, 0.35);
@@ -623,7 +633,7 @@ img {
 /* Hidden small image grid */
 .subject-image-grid {
   display: none;
-  margin-top: 1rem;
+  margin-top: 0.8rem;
   grid-template-columns: repeat(2, 1fr);
   gap: 0.8rem;
 }
@@ -633,7 +643,7 @@ img {
   display: grid;
 }
 
-/* Small images: about half the width of the cover */
+/* Small images */
 .subject-small-image {
   position: relative;
   width: 100%;
@@ -677,7 +687,7 @@ img {
   line-height: 1.25;
 }
 
-/* Subtle hover zoom */
+/* Hover zoom */
 .subject-cover img,
 .subject-small-image img {
   transition: transform 0.25s ease;
@@ -686,6 +696,37 @@ img {
 .subject-cover:hover img,
 .subject-small-image:hover img {
   transform: scale(1.04);
+}
+
+/* ==========================================
+   Responsive Gallery
+   ========================================== */
+
+@media (max-width: 950px) {
+  .subject-gallery {
+    grid-template-columns: 1fr;
+    max-width: 520px;
+  }
+
+  .subject-image-grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+@media (max-width: 600px) {
+  .gallery-heading-row {
+    flex-direction: column;
+    gap: 0.2rem;
+    margin-bottom: 2.5rem;
+  }
+
+  .gallery-sub-heading {
+    font-size: 1.1rem;
+  }
+
+  .subject-image-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
 }
 
 /* ==========================================
